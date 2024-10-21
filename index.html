@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" href="css/estilo.css">
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+        <div class="col-lg-6 mx-auto">
+           <h2 class="page-section-heading text-center text-uppercase text-secondary">Cadastro</h2>
+           <form method="post" action="processa.php">
+
+            <div class="form-group">
+                <label for="nome">Nome</label>
+                <input type="text" class="form-control" id="nome" name="nome" aria-describedby="nomeHelp" placeholder="Seu nome" required  >
+                <small id="nomeHelp" class="form-text text-muted">Digite seu nome completo</small>
+              </div>
+
+
+            <div class="form-group">
+              <label for="nome">Email</label>
+              <input type="email" class="form-control" id="email" name="email" aria-describedby="emailHelp" placeholder="Seu email" required maxlength="100">
+              <small id="emailHelp" class="form-text text-muted">Nunca vamos compartilhar seu email, com ninguém.</small>
+            </div>
+
+            <div class="form-group form-check">
+                     <label for="cor">Quais as suas cores preferidas</label>
+                     <br>
+
+                       <input class="form-check-input" type="checkbox" name="cor[]"  id="cor[]"  value="Azul">Azul <br> 
+                       <input class="form-check-input" type="checkbox" name="cor[]" id="cor[]"  value="Verde">Verde <br> 
+                       <input class="form-check-input" type="checkbox" name="cor[]" id="cor[]"  value="Vermelho">Vermelho <br> 
+                       <input class="form-check-input" type="checkbox" name="cor[]" id="cor[]"  value="Amarelo">Amarelo <br>
+                       <input class="form-check-input" type="checkbox" name="cor[]" id="cor[]"  value="Preto">Preto <br> 
+                       <input class="form-check-input" type="checkbox" name="cor[]" id="cor[]"  value="Branco">Branco <br> 
+           </div>
+           <br>
+
+         <div class="control-group">
+            <label for="secao">Qual Seção você mais gostou?</label>
+            <br>
+            <select class="custom-select mr-sm-2" name="secao" id="secao">
+                <option selected>Escolher...</option>
+                <option value="fotos">Fotos</option>
+                <option value="filmes">Filmes</option>
+                <option value="jogos">Jogos</option>
+            </select>
+        </div>
+        <br>
+
+        <div class="control-group">
+            <label for="estados">Quais estados você já visitou?</label>
+             <br>
+            <select multiple class="custom-select mr-sm-2" name="estados[]" id="estados[]">
+                <option value="SP">SP</option>
+                <option value="RJ">RJ</option>
+                <option value="MG">MG</option>
+                <option value="MS">MS</option>
+            </select>
+        </div>
+
+            <button type="submit" class="btn btn-primary">Enviar</button>
+         
+
+
+        </form>
+    </div>
+    </div>
+    </div>
+    
+    
+</body>
+</html>
